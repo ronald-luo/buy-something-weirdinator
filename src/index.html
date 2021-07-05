@@ -4,10 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <title>Buy Something Strange</title>
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color: coral;
+        }
+
+        nav {
+            margin: 2em;
+            text-align: center;
+        }
+
+        ul li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 0 2vw 0 0;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin: 2em;
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            padding: 0 1em 0 1em;
+        }
+        
+        .button-container {
+            display: grid;
+        }
+
+        .button{
+            margin: 4em;
+            position:relative;
+            display: inline-block;
+            justify-self: center;
+        }
+
+        .button a{
+        color:white;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+        font-size:36px;
+        text-align: center;
+        text-decoration:none;
+        background-color:#FFA12B;
+        display:block;
+        position:relative;
+        padding:20px 40px;
+        
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        text-shadow: 0px 1px 0px #000;
+        filter: dropshadow(color=#000, offx=0px, offy=1px);
+        
+        -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+        
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        }
+
+        .button a:active{
+        top:10px;
+        background-color:#F78900;
+        
+        -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+        -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+        box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+        }
+
+        .button:after{
+        content:"";
+        height:100%;
+        width:100%;
+        padding:4px;
+        position: absolute;
+        bottom:-15px;
+        left:-4px;
+        z-index:-1;
+        background-color:#2B1800;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Home Page</h1>
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+        </ul>
+    </nav> 
+
+    <h1>Buy Something Weird-inator</h1>
+    <p>Click the button and be taken somewhere weird. Do you trust me?</p>
+
+    <div ontouchstart="" class=button-container>
+        <div class="button">
+            <a onClick="randomLinkGenerator()">I'm ready</a>
+        </div>
+    </div>
+
 </body>
+<script>
+    const randomLinkGenerator = () => {
+        const links = ["https://www.amazon.com/Archie-McPhee-12698-Handi-Squirrel/dp/B06XXQD54H/?tag=readerwp-20", "https://www.amazon.com/Wacky-Waving-Inflatable-Miniature-Editions/dp/0762462876/?tag=readerwp-20", "https://www.amazon.com/Fairly-Odd-Novelties-FON-10261-Novelty/dp/B07791VZP5/?tag=readerwp-20", "https://www.amazon.com/Potato-Pal-potato-Upload-Novelty/dp/B07GKRGZWM/?tag=readerwp-20", "https://www.amazon.com/October-Elf-Autumn-Slippers-baguette/dp/B01N0L5YZ9/?tag=readerwp-20", "https://www.amazon.com/Simulation-Pillow-Lumbar-Cushion-Stuffed/dp/B07SHP29DM/?tag=readerwp-20", "https://www.amazon.com/SubSafe-Sandwich-Plastic-Container-Coolers/dp/B079SHJ5HL/?tag=readerwp-20", "https://www.amazon.com/Underarm-Armpit-Exfoliation-Natural-Deodorant/dp/B07JCC7TKS/tag=readerwp-20", "https://www.amazon.com/Zen-Garden-Litter-Box-Mindfulness/dp/0762464127/?tag=readerwp-20", "https://www.amazon.com/Archie-Mcphee-Instant-underpants-water/dp/B004A2LW6A/tag=readerwp-20", "https://www.amazon.com/Placenta-Babys-Roommate-Designer-Figure/dp/B00UZKSZ8Y/?tag=readerwp-20", "https://www.amazon.com/HmiL-U-Stealing-Automatic-Speaking-Creative/dp/B07WMX6H5S/?tag=readerwp-20", "https://www.amazon.com/Chia-Decorative-Pottery-Planter-Occasion/dp/B01G988ZRG/tag=readerwp-20", "https://www.amazon.com/One-Pillows-Reversible-Decorative-Pillowcase/dp/B085Q99W43/?tag=readerwp-20", "https://www.amazon.com/NNBB-Fingertips-Digging-Gardening-Gardeners/dp/B0727VG6SX/?tag=readerwp-20", "https://www.amazon.com/Forum-Novelties-Over-Hill-Exerciser/dp/B00CHJR8W0/tag=readerwp-20", "https://www.amazon.com/Veken-Fountain-Automatic-Dispenser-Replacement/dp/B07H57NBGP/tag=readerwp-20", "https://www.amazon.com/Garden-Outdoor-Naughty-Christmas-Decoration/dp/B08P8RR21L/?tag=readerwp-20", "https://www.amazon.com/NOONI-Marshmallow-Whip-Maker-Baby/dp/B06XHH3GLF/?tag=readerwp-20", "https://www.amazon.com/Accoutrements-Bacon-Soap-in-Tin/dp/B007A3ECWM/?tag=readerwp-20", "https://www.amazon.com/Pickle-Gourmet-Flavored-Cotton-Candy/dp/B07YZVNWND/?tag=readerwp-20", "https://www.amazon.com/Cat-Butt-Tissue-Holder-Standard/dp/B079618L3W/?tag=readerwp-20", "https://www.amazon.com/MAGNET-Shrimp-Magnet-Fridge-Window/dp/B07GRGPC9X/?tag=readerwp-20", "https://www.amazon.com/Original-Bathroom-Activated-Lighting-Christmas/dp/B01HTU9TLY/?tag=readerwp-20", "https://www.amazon.com/Prank-Pack-Pet-Butler-Prank/dp/B07583LC29/tag=readerwp-20", "https://www.amazon.com/Parmigiano-Reggiano-First-Quality-Reggiano/dp/B001F5IFLA/?tag=readerwp-20", "https://www.amazon.com/Detector-Handheld-Flashligh…tomotive-Detection/dp/B01MR2SQ0W/?tag=readerwp-20", "https://www.amazon.com/Fworld-Seamless-Regulation-Party-Heavy/dp/B07MZ3RQRP/?tag=readerwp-20", "https://www.amazon.com/Pet-Memory-Shop-Deluxe-Casket/dp/B00WFS9BJQ/?tag=readerwp-20", "https://www.amazon.com/Poop-Off-Bird-Remover-Sprayer-32-Ounce/dp/B0002G7ZQE/?tag=readerwp-20", "https://www.amazon.com/dp/B00GVHEQV0/?tag=readerwp-20", "https://www.amazon.com/Bloody-Mary-Blood-Makeup-Spray/dp/B0743KRZ2C/?tag=readerwp-20", "https://www.amazon.com/dp/B00B5YQY6O/?tag=readerwp-20", "https://www.amazon.com/dp/B07PQ55BKT/?tag=reader-wp20&tag=readerwp-20", "https://www.amazon.com/2-Pack-Handgun-Bullet-Cube-Trays/dp/B076HJWC6Y/?tag=readerwp-20", "https://www.amazon.com/dp/B00KHZGMZ0/?tag=readerwp-20", "https://www.amazon.com/dp/B004BBR95I/?tag=readerwp-20", "https://www.amazon.com/dp/B003RQH5OI/?tag=readerwp-20", "https://www.amazon.com/Platinum-Baguette-Certified-Diamond-Engagement/dp/B07QZ6Y9ZC/tag=readerwp-20", "https://www.amazon.com/dp/B0150BAJYA/?tag=readerwp-20", "https://www.amazon.com/dp/B0010VS078/?tag=readerwp-20", "https://www.amazon.com/French-Holder-Perfect-Stocking-Stuffer/dp/B08RS8W4VF/?tag=readerwp-20", "https://www.amazon.com/ANJUU-Handbag-Animal-Shoulder-Birthday/dp/B0791B8YQ9/?tag=readerwp-20", "https://www.amazon.com/Girlfriend-Body-Pillow-Pink-Relationship/dp/B0050VN77C/?tag=readerwp-20", "https://www.amazon.com/dp/B00JLWKABC/?tag=readerwp-20", "https://www.amazon.com/dp/B0063LUB3Q/?tag=readerwp-20", "https://www.amazon.com/dp/B00BPWU3SQ/?tag=readerwp-20", "https://www.amazon.com/Pooping-Pooches-White-Elephant-Calendar/dp/B0754Y9GNH/?tag=readerwp-20", "https://www.amazon.com/Man-Glitter-Sawdust-Gag-Gift/dp/B076DLCDWQ/?tag=readerwp-20", "https://www.amazon.com/Knock-Paper-Tantrum-Nifty-Note/dp/1601068093/?tag=readerwp-20", "https://www.amazon.com/The-Screaming-Goat-Book-Figure/dp/0762459816/?tag=readerwp-20", "https://www.amazon.com/Adult-Washable-Funny-Bandana-Shield/dp/B08P1F72CM/?tag=readerwp-20", "https://www.amazon.com/Toysmith-Changer-6-5-Inch-Various-Colors/dp/B000FK3WDC/?tag=readerwp-20", "https://www.amazon.com/Dorothy-Golden-Girls-Accessories-Apparel/dp/B07GL1TPQK/?tag=readerwp-20", "https://www.amazon.com/PIZZA-Pepperoni-Cotton-Socks-Europe/dp/B01N5CHIQC/?tag=readerwp-20", "https://www.amazon.com/ASSWIPES-Flushable-Body-Fragrance-Sensitive/dp/B07543XRVP/?tag=readerwp-20", "https://www.amazon.com/Renova-PC-53742-Black-Toilet-Tissue/dp/B00I7P9PBA/?tag=readerwp-20", "https://www.amazon.com/Star-Wars-Bantha-Costume-Pets/dp/B00E9BBR80/?tag=readerwp-20", "https://www.amazon.com/Metal-Buggy-Frame-Racing-Spring/dp/B01G7TCJ0G/?tag=readerwp-20", "https://www.amazon.com/MorTime-Inflatable-Serving-Containers-Parties/dp/B083NVWL7X/?tag=readerwp-20", "https://www.amazon.com/FLEXISPOT-Folding-Exercise-…ustable-Stationary/dp/B0762FFNQ4/?tag=readerwp-20", "https://www.amazon.com/Cordless-Counter%EF%BC%8CLV…alories-Adjustable/dp/B08C4PGRWB/?tag=readerwp-20", "https://www.amazon.com/Drilling-Non-Slip-Bathroom-Powerful-Sufferers/dp/B08SHFKN3B/?tag=readerwp-20", "https://www.amazon.com/Gemmy-Airblown-Inflatable-Eating-Venus/dp/B013VOXSFU/?tag=readerwp-20", "https://www.amazon.com/Saucemoto-holder-ketchup-dipping-sauces/dp/B07D1KW3PB/?tag=readerwp-20"]
+        randomInt = Math.floor(Math.random() * links.length)
+        console.log(links[randomInt])
+        window.open(links[randomInt])
+        return links[randomInt]
+    }
+</script>
 </html>
